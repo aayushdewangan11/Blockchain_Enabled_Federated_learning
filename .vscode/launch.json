@@ -1,0 +1,112 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "main.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/main.py",
+			"console": "integratedTerminal",
+			"args": ["-nd", "20", "-B", "10", "-mn", "mnist_cnn", "-max_ncomm", "1000", "-iid", "0", "-lr", "0.01", "-g", "5", "-ns", "1", "-v", "1", "-ha", "12,5,3", "-aio", "1", "-st", "0", "-nm", "3", "-mt", "0.0", "-pow", "2", "-ko", "6", "-lo", "20", "-vh", "0.08", "-mp", "20"]
+		},
+		{
+			"name": "server.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/WHDY_vanilla_malicious_involved_fedavg/server.py",
+			"console": "integratedTerminal",
+			"args": ["-nc", "20", "-mn", "mnist_cnn", "-iid", "0", "-nm", "3"]
+		},
+		{
+			"name": "f1_plot_graph_combine.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/plottings/f1_plot_graph_combine.py",
+			"console": "integratedTerminal",
+			"args": ["${workspaceFolder}/plotting_logs/VFL_nm0/run1", "${workspaceFolder}/plotting_logs/VFL_nm3/run2", "${workspaceFolder}/plotting_logs/old_PoS_3_20_vh=0.08/run1"]
+		},
+		{
+			"name": "f3_device_overall_learning_curve_VFL.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/plottings/f3_device_overall_learning_curve_VFL.py",
+			"console": "integratedTerminal",
+			"args": ["${workspaceFolder}/plotting_logs/VFL_nm0/run1"]
+		},
+		{
+			"name": "f4_choice_of_vh.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/plottings/f4_choice_of_vh.py",
+			"console": "integratedTerminal",
+			"args": ["${workspaceFolder}/plotting_logs/PoS 3-20 vh=1 32 rounds/false_positive_malious_nodes_inside_slipped.txt", "${workspaceFolder}/plotting_logs/PoS 3-20 vh=1 32 rounds/true_positive_good_nodes_inside_correct.txt"]
+		},
+		{
+			"name": "f5_effectivesness_validation_mechanisms.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/plottings/f5_effectivesness_validation_mechanisms.py",
+			"console": "integratedTerminal",
+			"args": ["${workspaceFolder}/plotting_logs/VFL_nm0", "${workspaceFolder}/plotting_logs/PoS_0_20_vh=1", "${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08", "${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08_Malicious_Validator", "${workspaceFolder}/plotting_logs/VFL_nm3"]
+		},
+		{
+			"name": "f6_src_block_gen_time.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/plottings/f6_src_block_gen_time.py",
+			"console": "integratedTerminal",
+			"args": ["${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run1", "${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run2", "${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run3", "${workspaceFolder}/plotting_logs/PoW/PoW_1", "${workspaceFolder}/plotting_logs/PoW/PoW_2"]
+		},
+		{
+			"name": "f7_forking_no_valid_block_events.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/plottings/f7_forking_no_valid_block_events.py",
+			"console": "integratedTerminal",
+			"args": ["${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run1", "${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run2", "${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run3", "${workspaceFolder}/plotting_logs/PoW/PoW_1", "${workspaceFolder}/plotting_logs/PoW/PoW_2"]
+		},
+		{
+			"name": "f8_miner_selection.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/plottings/f8_miner_selection.py",
+			"console": "integratedTerminal",
+			"args": ["${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run1", "${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run2", "${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run3", "${workspaceFolder}/plotting_logs/PoW/PoW_1", "${workspaceFolder}/plotting_logs/PoW/PoW_2"]
+		},
+		{
+			"name": "f9_PoS_stake_curve.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/plottings/f9_PoS_stake_curve.py",
+			"console": "integratedTerminal",
+			"args": ["${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run1", "${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run2", "${workspaceFolder}/plotting_logs/PoS_3_20_vh=0.08/run3", "${workspaceFolder}/plotting_logs/PoW/PoW_1", "${workspaceFolder}/plotting_logs/PoW/PoW_2"]
+		},
+		{
+			"name": "f10_diff_malicious_nodes_WVM_combination.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/plottings/f10_diff_malicious_nodes_WVM_combination.py",
+			"console": "integratedTerminal",
+			"args": ["${workspaceFolder}/plotting_logs/PoS 3 20 0.08 diff # malicious nodes/12 5 3", "${workspaceFolder}/plotting_logs/PoS 3 20 0.08 diff # malicious nodes/9 8 3"]
+		},
+		{
+			"name": "crop_white_on_plots.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/plottings/crop_white_on_plots.py",
+			"console": "integratedTerminal",
+			"args": ["${workspaceFolder}/plotting_logs/f5_effectivesness_validation_mechanisms.png"]
+		},
+		{
+			"name": "main2",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/main.py",
+			"console": "integratedTerminal"
+		}
+		
+	]
+}
