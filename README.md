@@ -1,4 +1,4 @@
-# Bloackchain Enabled Federated learning (simulation)
+# Bloackchain Enabled Federated learning
 
 ## Introduction
 A Proof-of-Stake (PoS) blockchain-based Federated Learning framework with a validation scheme robust against the distorted local model updates. This repo hosts an simulated implementation for VBFL written in Python.
