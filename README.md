@@ -1,9 +1,9 @@
 # VBFL (simulation)
 
 ## Introduction
-VBFL is a Proof-of-Stake (PoS) blockchain-based Federated Learning framework with a validation scheme robust against the distorted local model updates. This repo hosts an simulated implementation for VBFL written in Python.
+A Proof-of-Stake (PoS) blockchain-based Federated Learning framework with a validation scheme robust against the distorted local model updates. This repo hosts an simulated implementation for VBFL written in Python.
 
-Please refer to [*Robust Blockchained Federated Learning with Model Validation and Proof-of-Stake Inspired Consensus*](https://arxiv.org/abs/2101.03300) for detailed explanations of the mechanisms. This [*video*](https://www.youtube.com/watch?v=LMseEXEITvw&t=4510s&ab_channel=HangChen) is about my talk of VBFL.
+
 
 ## Instructions to Run
 #### <ins>Suggested</ins> Environments Setup
@@ -13,7 +13,7 @@ pytorch 1.4.0
 ```
 (1) Clone the repo
 ```
-$ git clone https://github.com/hanglearning/VBFL.git
+$ git clone https://github.com/aayushdewangan11/Bloackchain_Enabled_Federated-learning.git
 ```
 (2) Create a new conda environment with python 3.7.6
 ```
@@ -39,7 +39,6 @@ Sample running command
 ```
 $ python main.py -nd 20 -max_ncomm 100 -ha 12,5,3 -aio 1 -pow 0 -ko 6 -nm 3 -vh 0.08 -cs 0 -B 10 -mn mnist_cnn -iid 0 -lr 0.01 -dtx 1
 ```
-This command corresponds to <i>VBFL_PoS_3/20_vh0.08 in the paper</i>
 
 VBFL arguments
 
@@ -96,9 +95,3 @@ A temporary solution is to specify <b>-dtx 1</b>. This argument lets the program
 The experimental results shown in the paper were obtained from Google Colab Pro with Nvidia Tesla V100, by which in most situations can run 100 communication rounds with 20 devices. If you wish to test a more complicated running environment, such as specifying a '--miner_acception_wait_time' to limit the validator-transaction accpetion time for miners, then each miner may end up with blocks having different validator-transactions and a forking event will require chain resyncing, then at this moment, please use CPU with a high ram. Fixing's underway.
 
 Please raise other issues and concerns you found. Thank you!
-
-## Acknowledgments
-
-(1)The code of the blockchain architecture and PoW consensus is inspired by Satwik's [*python_blockchain_app*](https://github.com/satwikkansal/python_blockchain_app). 
-
-(2)The code of FedAvg used in VBFL is inspired by [*WHDY's FedAvg implementation*](https://github.com/WHDY/FedAvg).
