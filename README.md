@@ -78,3 +78,6 @@ Please see <i>main.py</i> for other argument options.
 
 
 Please raise other issues and concerns you found. Thank you!
+
+
+![image](https://github.com/aayushdewangan11/Blockchain_Enabled_Federated_learning/assets/79148304/6054f043-53d7-4096-b382-a3665c27c7d0)
